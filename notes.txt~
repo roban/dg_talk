@@ -1,0 +1,78 @@
+12 - 1      watch talks
+1 - 1:30    image search
+1:30 - 2    draft slide text
+2 - 2:30    PDF slides
+2:30 - 3:00 polish / edit slides
+
+Roban Hultman Kramer
+
+Hightable
+
+All of these dichotomies are false.
+
+Observational Astrophysics versus Applied Machine Learning
+
+ "uncertainty is everything" vs. "decisions are everything"
+
+examples
+
+ Bayesian MCMC versus SVM
+
+or
+
+ a focus on parameters versus predictions 
+
+counter-example: observation planning
+
+or 
+
+ Error bars, p-values, and posterior distributions versus accuracy,
+ lift, and ROC curves
+
+ Of course, in astronomy we like to plot 1-sigma error bars in log
+ space and are comfortable with them spanning orders of magnitude. A
+ factor of two is easily swept under the rug with the phrase
+ "excluding systematic error".
+
+Machine Learning versus Statistics
+
+ The big difference I’ve noticed between the two fields is that
+ statisticians like to demonstrate our methods on new examples whereas
+ computer scientists seem to be prefer to show better performance on
+ benchmark problems. Both approaches to evaluation make sense in their
+ own way; I just have the impression that stat and CS have evolved to
+ have different priorities. To a statistician, a method is powerful
+ when it generalizes to new situations. To a computer scientist,
+ though, solving a new problem is no big deal—they can solve problems
+ whenever they want, and it is through benchmarks that they can make
+ fair comparisons.
+
+ Economics: identify the causal effect;
+
+ Psychology: model the underlying process;
+
+ Statistics: fit the data;
+
+ Computer science: predict.
+
+ -- http://andrewgelman.com/2012/09/model-checking-and-model-understanding-in-machine-learning/
+
+Models with high computational complexity versus models with high data
+size (dimensions and samples).
+
+ http://ba.stat.cmu.edu/journal/2012/vol07/issue03/solonen.pdf
+
+vs.
+
+ mahout
+
+Counter-example: SKA
+
+Quasar Jet Image / Quasar spectrum
+
+Quasar fit parameters
+
+Hierarchical model / IGM fit parameters
+
+
+

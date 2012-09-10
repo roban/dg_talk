@@ -1,0 +1,360 @@
+\documentclass{article}
+\pagestyle{empty}
+
+% set up page size and margins
+%\usepackage[letterpaper,landscape,centering,margin=0.5in]{geometry}
+%\usepackage[screen,centering,margin=0.5in]{geometry}
+\usepackage[paperwidth=233mm,paperheight=180mm,centering,margin=0.5in]{geometry}
+
+% this was recommended by psnfss2e.pdf
+%\usepackage{textcomp}
+%\usepackage{txfonts}
+%\renewcommand{\rmdefault}{cm}
+%\usepackage{lmodern}
+%\usepackage[Symbol]{upgreek}
+%\newcommand{\alphaup}{\upalpha}
+%%% Upright Greek letters
+\usepackage{amsfonts}
+\DeclareSymbolFont{UPM}{U}{eur}{m}{n}
+\SetSymbolFont{UPM}{bold}{U}{eur}{b}{n}
+\DeclareMathSymbol{\upalpha}{0}{UPM}{"0B}
+\DeclareMathSymbol{\upbeta}{0}{UPM}{"0C}
+%\usepackage[math]{kurier}
+%\renewcommand{\rmdefault}{cm}
+\usepackage[T1]{fontenc}
+\usepackage{cmbright}
+%\usepackage{ccfonts}
+
+%\usepackage{psfonts}
+
+%\usepackage{helvet}
+%\usepackage{avant}
+
+\usepackage{url}
+
+%% % from http://www.superstrate.net/useful/useful.html
+%% \DeclareFontFamily{U}{euc}{}% I chose euc because the chart is called Euler cursive
+%% \DeclareFontShape{U}{euc}{m}{n}{<-6>eurm5<6-8>eurm7<8->eurm10}{}%
+%% \DeclareSymbolFont{AMSc}{U}{euc}{m}{n} % I chose AMSc because AMSa and AMSb are defined in the amsfonts-package
+%% \DeclareMathSymbol{\alphaup}{\mathord}{AMSc}{11}
+
+% scale up the fonts and space things correctly
+
+
+%\linespread{2}
+
+%% stolen from file `a0poster.cls', modified by RHK shifted font sizes
+%% down three lines (and added three smaller sizes)
+\renewcommand{\tiny}        {\fontsize{6.95}{8.68}\selectfont}    
+\renewcommand{\scriptsize}  {\fontsize{8.33}{10.42}\selectfont}    
+\renewcommand{\footnotesize}{\fontsize{10}{12.5}\selectfont}    
+\renewcommand{\small}       {\fontsize{12}{14}\selectfont}    
+\renewcommand{\normalsize}  {\fontsize{14.4}{18}\selectfont}  
+\renewcommand{\large}       {\fontsize{17.28}{22}\selectfont} 
+\renewcommand{\Large}       {\fontsize{20.74}{25}\selectfont} 
+\renewcommand{\LARGE}       {\fontsize{24.88}{30}\selectfont} 
+\renewcommand{\huge}        {\fontsize{26.5}{32}\selectfont} 
+\renewcommand{\Huge}        {\fontsize{35.83}{45}\selectfont} 
+\newcommand{\veryHuge}      {\fontsize{43}{54}\selectfont}    
+\newcommand{\VeryHuge}      {\fontsize{51.6}{64}\selectfont}  
+\newcommand{\VERYHuge}      {\fontsize{61.92}{77}\selectfont} 
+%			    {\fontsize{74.3}{93}\selectfont}  
+%			    {\fontsize{89.16}{112}\selectfont}
+%			    {\fontsize{107}{134}\selectfont}  
+
+% These colours are tried and tested for titles and headers. Don't
+% over use color!
+\usepackage{color}
+\definecolor{DarkBlue}{rgb}{0.1,0.1,0.5}
+\definecolor{Red}{rgb}{0.8,0.0,0.0}
+\definecolor{Purple}{rgb}{0.8,0.0,0.8}
+\definecolor{LightRed}{rgb}{1.0,0.0,0.0}
+\definecolor{Cyan}{rgb}{0.0,0.9,0.9}
+\definecolor{Magenta}{rgb}{0.9,0.0,0.9}
+\definecolor{Green}{rgb}{0.0,0.9,0.0}
+\definecolor{PicBlue}{rgb}{0.098,0.082,0.227}
+
+%% stolen from http://www.edwardtufte.com/tufte/
+\definecolor{ETYellow}{rgb}{1,1,0.953}
+
+%% I've made it darker to calm the effect when projected on a large
+%% screen
+\definecolor{BGYellow}{rgb}{0.95,0.95,0.85}
+% \definecolor{BGYellow}{rgb}{0.9,0.9,0.7}
+%\pagecolor{BGYellow}
+
+% see documentation for a0poster class for the size options here
+\def\Head#1{\noindent\begin{center}{\Large\color{DarkBlue}#1}\end{center}}
+\def\Important#1{\noindent{\color{Red} #1}}
+\def\ImportantB#1{\noindent{ #1}}
+\def\LHead#1{\noindent{\Large #1}}
+\def\Title#1{\noindent\begin{center}{\huge\color{Red}#1}\end{center}}
+\def\Subtitle#1{\noindent\begin{center}{\LARGE\color{DarkBlue}#1}\end{center}}
+
+% select the right font
+%\renewcommand{\familydefault}{\sfdefault}
+
+% The textpos package is necessary to position textblocks at arbitary 
+% places on the page.
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Graphics to include graphics. Times is nice on posters, but you
+% might want to switch it off and go for CMR fonts.
+%\usepackage{graphics,wrapfig,times}
+\usepackage{graphicx,wrapfig}
+
+\TPGrid[0.5in,0.5in]{10}{10} % 2 cols of width 4.5, plus 1 gap of width 1
+
+\parindent=0pt
+\parskip=0.5\baselineskip
+
+%\newcommand\ion[2]{#1{\scshape{#2}}} 
+\newcommand\ion[2]{#1{\MakeUppercase{#2}}} 
+\newcommand{\nH}{\ensuremath{n_\mathrm{H}}}
+\newcommand{\Hn}{\ensuremath{\mathrm{HI}}}
+\newcommand{\Hp}{\ensuremath{\mathrm{HII}}}
+\newcommand{\Hen}{\ensuremath{\mathrm{HeI}}}
+\newcommand{\Hep}{\ensuremath{\mathrm{HeII}}}
+\newcommand{\Hepp}{\ensuremath{\mathrm{HeIII}}}
+\newcommand{\logNH}{\ensuremath{\log(N_\mathrm{H}/\mathrm{cm}^{-2})}}
+
+\begin{document}
+
+\pagecolor{white}
+\begin{textblock}{10}(0,1)
+
+\Title{Quasars and \ion{H}{ii} regions during reionization}
+
+\end{textblock}
+
+\begin{textblock}{10}(0,4)
+
+\Head{\large Roban Hultman Kramer \hfill with Zolt\'an Haiman}
+
+\centering Department of Astronomy, Columbia University
+
+\end{textblock}
+
+$\;$
+
+\vfill
+{\small
+\texttt{roban@astro.columbia.edu}\hfill\texttt{zoltan@astro.columbia.edu}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{textblock}{10}(0,0)
+  \LHead{\color{Red}The thickness of high-redshift quasar ionization
+    fronts}
+\end{textblock}
+
+\begin{textblock}{10}(0,0.5)
+\Important{\color{DarkBlue}Could the thickness of the ionization front be observed and
+  used to constrain the hardness of the quasar's ionizing spectrum?}
+
+  \begin{center}
+    Simulated propagation of quasar ionization fronts into the IGM
+    \includegraphics[height=6\TPVertModule]{ionization_profile.png}\\ 
+    {\color{Red}Ionized} and {\color{DarkBlue}neutral} fractions at
+    $10^6$ and $10^8$ years for --- hard and - - soft spectra
+  \end{center}
+
+  With a sufficiently hard ionizing spectrum, the thickness of the
+  front exceeds $\sim 1$ physical Mpc and may be measurable from the
+  3D morphology of its redshifted 21-cm signal or Lyman-$\upalpha$
+  absorption spectrum.
+
+  {\small Kramer \& Haiman (2008 MNRAS v385 p1561)}
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagecolor{PicBlue}
+\begin{textblock}{10}(0,0)
+  \LHead{\color{white} Probing reionization with quasar spectra}\\
+%{The Impact of the Intrinsic Lyman-$\upalpha$ Emission Line Shape Uncertainty}
+\end{textblock}
+
+ \begin{textblock}{2.5}(7,3)
+   \textcolor{white}{The damping wing of neutral hydrogen in the IGM
+     extends into the transmission window of the quasar's ionized
+     region.}
+ \end{textblock}
+
+
+\begin{textblock}{5}(0,9.2)
+\textcolor{white}{\small
+Djorgovski et al.\\ (2001 ApJ 560L 5)\\
+\url{http://www.astro.caltech.edu/~george/reion/}}
+\end{textblock}
+
+ \begin{textblock}{5}(0,1)
+   \includegraphics[height=9.5\TPVertModule]{discovexplbig_edit.jpg}
+ \end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagecolor{white}
+\begin{textblock}{10}(0,0)
+  \LHead{\color{Red} Probing reionization with quasar spectra:}\\
+{\color{DarkBlue}  The Impact of the Intrinsic Lyman-$\upalpha$ Emission Line Shape Uncertainty}
+\end{textblock}
+
+\begin{textblock}{5}(0,1)
+    \includegraphics[height=9.5\TPVertModule]{depth_figure.png}
+\end{textblock}
+
+\begin{textblock}{4.5}(5.5,1.5)
+ The quasar absorption spectrum carries the signature of the IGM damping
+ wing. Mesinger \& Haiman (2007) found best fit values:
+\begin{center}
+  {\large $x_\mathrm{IGM} = 0.2,~1.0,~1.0$}
+\end{center}
+at $z = 6.42, 6.28, 6.22$, suggesting that reionization is incomplete
+at $z \sim 6.2$.
+
+Calculating the optical depth from the observed absorption spectrum
+requires modeling the intrinsic spectrum of the quasar.
+
+Our main question:\\ 
+\Important{Could errors in modeling and extrapolating the intrinsic
+  flux bias the $x_\mathrm{IGM}$ value and cause an ionized IGM to
+  mimic a neutral one?}
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{textblock}{10}(0,0)
+\LHead{\color{Red} Recovering the IGM neutral fraction:}\\
+input: $R_\mathrm{HII}=40.5\ \mathrm{Mpc}$, $x_\mathrm{Ref} = 10^{-5.5}$, $x_\mathrm{IGM} = 0.1$
+\end{textblock}
+
+\begin{textblock}{10}(0,1.25)
+  \centering
+  Fit results with \textbf{extrapolated spectra}:
+  \includegraphics[width=7\TPHorizModule]{fig12b.png}
+
+\raggedright
+\Important{\Large Systemic errors in the intrinsic flux modeling bias the measurements
+toward underestimating $x_\mathrm{IGM}$.}
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{textblock}{10}(0,0)
+\LHead{\color{Red} Recovering the IGM neutral fraction:}\\
+input: $R_\mathrm{HII}=40.5\ \mathrm{Mpc}$, $x_\mathrm{Ref} = 10^{-5.5}$, $x_\mathrm{IGM} = 0.1$
+\end{textblock}
+
+\begin{textblock}{10}(0,1)
+\begin{center}
+\includegraphics[width=5\TPHorizModule]{fig12b.png}
+\end{center}
+
+{\Large
+\Important{ Systemic errors in the intrinsic flux modeling bias
+  the measurements toward underestimating $x_\mathrm{IGM}$.}
+
+This bias only strengths the conclusions in MH2007 that their best-fit
+values (of $x_\mathrm{IGM} = 1.0$ at $z = 6.22$ and $6.28$) indicate a
+significantly neutral IGM at $z>6$.}
+
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagecolor{white}
+\begin{textblock}{10}(0,0)
+\LHead{\color{Red} Feedback from clustered sources during reionization}
+\end{textblock}
+
+\begin{textblock}{10}(0,0.5)
+  \Important{\color{DarkBlue}How much will the clustering of early
+    galaxies enhance their influence (feedback) on one another?}
+
+  Feedback mechanism: star formation is suppressed in minihalos
+  forming inside an ionized region.
+
+  We find that clustering increases minihalo suppression by up to $\sim 60$
+  times. This prolongs reionization and reduces $\tau$, as required by
+  WMAP. Galaxy clustering is likely to similarly boost other feedback
+  mechanisms.
+
+\end{textblock}
+
+\begin{textblock}{6.5}(0,3.1)
+  \centering
+    \Important{IGM ionized fraction versus redshift}\\
+    \includegraphics[width=6.5\TPHorizModule]{feedback_curves.jpg}\\
+\end{textblock}
+
+\begin{textblock}{3}(7,3.1)
+  \vspace{\baselineskip}
+
+  {\small
+  {\color{Purple} - - feedback with no clustering},\\
+  --- feedback with clustering,\\
+  {\color{DarkBlue} $\cdot \cdot$ all halos}, 
+  {\color{Red} $\cdot \cdot$ large halos only}}
+
+  \vspace{2\baselineskip}
+
+  Feedback also increases the mean ionized bubble size at late stages
+  of reionization.
+
+  \vspace{2\baselineskip}
+
+  {\small Kramer, Haiman, \& Oh\\ (2006 ApJ v649 p570)}
+
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{textblock}{10}(0,10)\centering
+\textbf{\color{white} Honeycomb Cowfish \textit{Acanthostracion polygonius},
+  Bonaire, Netherlands Antilles}
+\end{textblock}
+
+\begin{textblock}{12}(-1,-1)
+    \includegraphics[width=12\TPHorizModule]{cowfish_1024.jpg}
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{textblock}{10}(0,0)
+\LHead{\color{Red} Recovering the IGM neutral fraction:}\\
+input: $R_\mathrm{HII}=40.5\ \mathrm{Mpc}$, $x_\mathrm{Ref} = 10^{-5.5}$, $x_\mathrm{IGM} = 0.1$
+\end{textblock}
+
+\begin{textblock}{10}(0,1)\centering
+  \ImportantB{Histogram of fit results with {\color{DarkBlue}
+      perfectly known spectra} (no flux extrapolation errors):}\\
+  \includegraphics[width=8\TPHorizModule]{fig12a.png}
+\end{textblock}
+
+\end{document}
