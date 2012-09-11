@@ -32,7 +32,9 @@
 %\usepackage{helvet}
 %\usepackage{avant}
 
-\usepackage{url}
+\usepackage[pdfpageduration=20]{hyperref}
+\hypersetup{pdfpageduration=20}
+%\usepackage{url}
 
 %% % from http://www.superstrate.net/useful/useful.html
 %% \DeclareFontFamily{U}{euc}{}% I chose euc because the chart is called Euler cursive
@@ -114,6 +116,7 @@
 \parskip=0.5\baselineskip
 
 \begin{document}
+\hypersetup{pdfpageduration=20}
 \large
 
 \pagecolor{white}
@@ -144,6 +147,7 @@
 \
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{pdfpageduration=20}
 
 \pagecolor{white}
 \begin{textblock}{5}(0,0)
@@ -180,6 +184,7 @@ Making Predictions  \vspace{0.5in} \\
 \
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{pdfpageduration=20}
 
 \pagecolor{white}
 \begin{textblock}{5}(0,0)
@@ -613,7 +618,7 @@ ROC curves
 \includegraphics[height=5.0\TPHorizModule,
   angle=-90]{images/solonen_fig.pdf}
 
-\tiny ``Efficient MCMC for Climate Model Parameter Estimation:
+\normalsize ``Efficient MCMC for Climate Model Parameter Estimation:
   Parallel Adaptive Chains and Early Rejection'' Solonen et al. \textit{Bayesian Analysis} 7, 3 (2012), 715-736.
 \end{textblock}
 
