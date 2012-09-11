@@ -113,44 +113,32 @@
 \parindent=0pt
 \parskip=0.5\baselineskip
 
-%\newcommand\ion[2]{#1{\scshape{#2}}} 
-\newcommand\ion[2]{#1{\MakeUppercase{#2}}} 
-\newcommand{\nH}{\ensuremath{n_\mathrm{H}}}
-\newcommand{\Hn}{\ensuremath{\mathrm{HI}}}
-\newcommand{\Hp}{\ensuremath{\mathrm{HII}}}
-\newcommand{\Hen}{\ensuremath{\mathrm{HeI}}}
-\newcommand{\Hep}{\ensuremath{\mathrm{HeII}}}
-\newcommand{\Hepp}{\ensuremath{\mathrm{HeIII}}}
-\newcommand{\logNH}{\ensuremath{\log(N_\mathrm{H}/\mathrm{cm}^{-2})}}
-
 \begin{document}
 \large
 
 \pagecolor{white}
-\begin{textblock}{10}(0,1)
-\Title{Uncertainty versus Decisions}
-\Subtitle{Some (false) dichotomies between\\ Astrophysics and Machine Learning}
+
+\begin{textblock}{10}(-1,-3)\Large\centering
+\includegraphics[width=12\TPHorizModule]{images/M87.jpg}
 \end{textblock}
 
-\begin{textblock}{10}(0,5)
-
-\Head{\large Roban Hultman Kramer}
-
-\centering Hightable\\
-{\small http://hightable.com}\\\vspace{0.1in}
-a part of Gerson Lehrman Group\\
-{\small http://gersonlehrmangroup.com}
+\begin{textblock}{10}(0,3)
+\Title{\textbf{Uncertainty versus Decisions}}
+\Subtitle{\textcolor{Cyan}{Some (false) dichotomies between\\ Astrophysics and Machine Learning}}
 \end{textblock}
 
-$\;$
+\begin{textblock}{10}(0,0.2)
+\large \textcolor{Cyan}{Roban Hultman Kramer}
+\end{textblock}
 
-\vfill
-\begin{center}
+\begin{textblock}{3}(7,0)
+\includegraphics[width=3\TPHorizModule]{images/ht-logo.png}
+\end{textblock}
+
+\begin{textblock}{10}(0,10)\centering
 \small
-\texttt{roban@astro.columbia.edu}\\
-\texttt{http://roban.github.com/\\
-}
-\end{center}
+\texttt{robanhk@gmail.com} \hspace{1in} \texttt{http://roban.github.com}
+\end{textblock}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \
@@ -198,14 +186,118 @@ Making Predictions  \vspace{0.5in} \\
 \centering {\huge Astrophysics}
 \end{textblock}
 
+\begin{textblock}{10}(1.2,1.2)\Large
+\includegraphics[width=8\TPHorizModule]{images/qso_spectrum.pdf}\\
+\end{textblock}
+
+\begin{textblock}{10}(0,9.7)\Large\centering
+The uncertainty of the measurement is as important as the value.
+\end{textblock}
+
 \begin{textblock}{10}(1.5,0.7)\Large
 \textcolor{Red}{\veryHuge Uncertainty is everything}\\
 \end{textblock}
 
-\begin{textblock}{10}(1.2,1.6)\Large
-\includegraphics[width=8\TPHorizModule]{images/qso_spectrum.pdf}\\
-The error is as important as the measurement!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagecolor{white}
+\begin{textblock}{5}(0,0)
+\centering {\huge Astrophysics}
 \end{textblock}
+
+\begin{textblock}{10}(-1,1.3)\Large\centering
+\includegraphics[height=8\TPVertModule]{images/qso_spectrum_posterior.pdf}\\
+\end{textblock}
+
+\begin{textblock}{10}(0,9.7)\Large\centering
+The uncertainty of the parameter is as important as the value.
+\end{textblock}
+
+\begin{textblock}{10}(1.5,0.7)\Large
+\textcolor{Red}{\veryHuge Uncertainty is everything}
+
+posterior distribution of parameters from MCMC
+\end{textblock}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagecolor{white}
+\begin{textblock}{5}(0,0)
+\centering {\huge Astrophysics}
+\end{textblock}
+
+\begin{textblock}{10}(7.5,-0.5)
+\includegraphics[height=4\TPVertModule]{images/qso_spectrum_posterior.pdf}\\
+\end{textblock}
+
+\begin{textblock}{8}(1,4)\Large
+\includegraphics[height=4\TPVertModule]{images/plate.pdf}\\
+\end{textblock}
+
+\begin{textblock}{6}(5,4)
+Population level:\\
+distribution of parameter vectors
+
+$p(\theta_i| \mu, \sigma) \sim N(\mu, \sigma)$
+\vspace{0.5in}
+
+Quasar level:\\
+likelihood of observed spectrum\\given model
+
+$p(F_{i,j} | \theta_i) \sim \cdots$
+
+\end{textblock}
+
+\begin{textblock}{10}(0,9.7)\Large\centering
+
+\end{textblock}
+
+\begin{textblock}{10}(1.5,0.7)\Large
+\textcolor{Red}{\veryHuge Uncertainty is everything}\\
+hierarchical model of the population\\ and individual objects
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagecolor{white}
+\begin{textblock}{5}(0,0)
+\centering {\huge Astrophysics}
+\end{textblock}
+
+\begin{textblock}{10}(7.5,-0.5)
+\includegraphics[height=4\TPVertModule]{images/qso_spectrum_posterior.pdf}\\
+\end{textblock}
+
+\begin{textblock}{10}(7.5,4)
+\includegraphics[height=4\TPVertModule]{images/plate.pdf}\\
+\end{textblock}
+
+\begin{textblock}{10}(-1,1.3)\Large\centering
+\includegraphics[height=8\TPVertModule]{images/Lya_CIV_peak_cor.png}\\
+\end{textblock}
+
+
+\begin{textblock}{10}(0,9.7)\Large\centering
+hierarchical model of the population and individual objects
+\end{textblock}
+
+\begin{textblock}{10}(1.5,0.7)\Large
+\textcolor{Red}{\veryHuge Uncertainty is everything}
+
+distribution of the population
+\end{textblock}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -251,45 +343,116 @@ finding boundaries in feature space\\
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\pagecolor{white}
-\begin{textblock}{5}(0,0)
-\centering {\huge Astrophysics}
+\begin{textblock}{5}(5,0)
+\centering {\huge Machine Learning}
 \end{textblock}
+
+\begin{textblock}{3}(0,0)
+\includegraphics[width=3\TPHorizModule]{images/ht-logo.png}
+\end{textblock}
+
+\begin{textblock}{8}(1,0.7)\Large
+\hfill \textcolor{DarkBlue}{\VERYHuge Decisions are everything}
+\end{textblock}
+
+\begin{textblock}{5}(0.5,2.0)\Large
+\textbf{Problems:}\\
+tagging of incoming content\\
+classification of new users\\
+\vspace{0.5in}
+\end{textblock}
+
+\begin{textblock}{5}(5.0,2.0)\Large
+\textbf{Challenges:}\\
+free-text tags are not consistent\\
+\end{textblock}
+
+\begin{textblock}{10}(0.0,3.5)\Large\centering
+\includegraphics[width=6\TPHorizModule]{images/labels_discussions_dochist.png}
+
+\textit{when humans tag}
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{textblock}{5}(5,0)
 \centering {\huge Machine Learning}
 \end{textblock}
 
-\begin{textblock}{5}(0,1)\Large
-\centering \textcolor{Red}{\VERYHuge Uncertainty} \vspace{0.1in}
-
-\textcolor{Red}{\huge Examples:}  \vspace{0.1in} \\
-error bars\\
-$p$-values\\
-posterior distributions\\
-
-\includegraphics[width=3.7\TPHorizModule]{images/posterior.pdf}
+\begin{textblock}{3}(0,0)
+\includegraphics[width=3\TPHorizModule]{images/ht-logo.png}
 \end{textblock}
 
-\begin{textblock}{1}(4.5,0.75)
-\centering {\VERYHuge vs.\vspace{1in}}
+\begin{textblock}{8}(1,0.7)\Large
+\hfill \textcolor{DarkBlue}{\VERYHuge Decisions are everything}
 \end{textblock}
 
-\begin{textblock}{5}(5,1)\Large
-\centering \textcolor{DarkBlue}{\VERYHuge Decisions}  \vspace{0.1in}
-
-\textcolor{DarkBlue}{\huge Examples:}  \vspace{0.1in} \\
-$F_\beta$-scores\\
-lift\\
-ROC curves
-
-\includegraphics[width=3.7\TPHorizModule]{images/Roccurves.png}
-
-\tiny Wikimedia Commons \texttt{http://en.wikipedia.org/wiki/File:Roccurves.png}
-
+\begin{textblock}{5}(0.5,2.0)\Large
+\textbf{Problems:}\\
+tagging of incoming content\\
+classification of new users\\
+\vspace{0.5in}
 \end{textblock}
 
+\begin{textblock}{5}(5.0,2.0)\Large
+\textbf{Challenges:}\\
+free-text tags are not consistent\\
+\end{textblock}
+
+\begin{textblock}{8}(1.,4.0)
+\textbf{Potential Solutions:}\\
+\textbf{fully-automatic tags?} -- not accurate enough, want human
+validation\\
+\textbf{pre-defined categories?} -- feels limiting and arduous
+\end{textblock}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{textblock}{5}(5,0)
+\centering {\huge Machine Learning}
+\end{textblock}
+
+\begin{textblock}{3}(0,0)
+\includegraphics[width=3\TPHorizModule]{images/ht-logo.png}
+\end{textblock}
+
+\begin{textblock}{8}(1,0.7)\Large
+\hfill \textcolor{DarkBlue}{\VERYHuge Decisions are everything}
+\end{textblock}
+
+\begin{textblock}{5}(0.5,2.0)\Large
+\textbf{Problems:}\\
+tagging of incoming content\\
+classification of new users\\
+\vspace{0.5in}
+\end{textblock}
+
+\begin{textblock}{5}(5.0,2.0)\Large
+\textbf{Challenges:}\\
+free-text tags are not consistent\\
+\end{textblock}
+
+\begin{textblock}{8}(1.,4.0)
+\textbf{Potential Solutions:}\\
+\textbf{fully-automatic tags?} -- not accurate enough, want human
+validation\\
+\textbf{pre-defined categories?} -- feels limiting and arduous
+\vspace{0.5in}
+
+\textbf{Implemented Solution:}\\
+train classifiers (e.g. SVM, logistic regression) on best tags\\
+suggest high-confidence tags to users for validation\\
+\vspace{0.1in}
+
+\textit{Forces a decision:} show a tag or don't.
+\end{textblock}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \
@@ -342,6 +505,81 @@ targeted marketing\vspace{0.2in}
 \textbf{Limited by:}\\
 user attention span\\
 marketing budgets
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pagecolor{white}
+\begin{textblock}{5}(5,0)
+\centering {\huge Machine Learning}
+\end{textblock}
+
+\begin{textblock}{5}(5,2)
+\centering \textit{\LARGE evaluating results\vspace{1in}}
+\end{textblock}
+
+\begin{textblock}{5}(5,1)\Large
+\centering \textcolor{DarkBlue}{\VERYHuge Decisions}  \vspace{0.75in}
+
+$F_\beta$-scores\\
+lift\\
+ROC curves
+
+\includegraphics[width=3.7\TPHorizModule]{images/Roccurves.png}
+
+\tiny Wikimedia Commons \texttt{http://en.wikipedia.org/wiki/File:Roccurves.png}
+
+\end{textblock}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pagecolor{white}
+\begin{textblock}{5}(0,0)
+\centering {\huge Astrophysics}
+\end{textblock}
+
+\begin{textblock}{5}(5,0)
+\centering {\huge Machine Learning}
+\end{textblock}
+
+\begin{textblock}{5}(0,1)\Large
+\centering \textcolor{Red}{\VERYHuge Uncertainty} \vspace{0.75in}
+
+error bars\\
+$p$-values\\
+posterior distributions\\
+
+\includegraphics[width=3.7\TPHorizModule]{images/posterior.pdf}
+\end{textblock}
+
+\begin{textblock}{1}(4.5,0.75)
+\centering {\VERYHuge vs.\vspace{1in}}
+\end{textblock}
+
+\begin{textblock}{10}(0,2)
+\centering \textit{\LARGE evaluating results\vspace{1in}}
+\end{textblock}
+
+\begin{textblock}{5}(5,1)\Large
+\centering \textcolor{DarkBlue}{\VERYHuge Decisions}  \vspace{0.75in}
+
+$F_\beta$-scores\\
+lift\\
+ROC curves
+
+\includegraphics[width=3.7\TPHorizModule]{images/Roccurves.png}
+
+\tiny Wikimedia Commons \texttt{http://en.wikipedia.org/wiki/File:Roccurves.png}
+
 \end{textblock}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
