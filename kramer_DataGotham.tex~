@@ -1,10 +1,12 @@
 \documentclass{article}
 \pagestyle{empty}
 
+\usepackage[normalem]{ulem}
+
 % set up page size and margins
 %\usepackage[letterpaper,landscape,centering,margin=0.5in]{geometry}
 %\usepackage[screen,centering,margin=0.5in]{geometry}
-\usepackage[paperwidth=233mm,paperheight=180mm,centering,margin=0.5in]{geometry}
+\usepackage[paperwidth=240mm,paperheight=180mm,centering,margin=0.5in]{geometry}
 
 % this was recommended by psnfss2e.pdf
 %\usepackage{textcomp}
@@ -88,8 +90,8 @@
 \def\Important#1{\noindent{\color{Red} #1}}
 \def\ImportantB#1{\noindent{ #1}}
 \def\LHead#1{\noindent{\Large #1}}
-\def\Title#1{\noindent\begin{center}{\huge\color{Red}#1}\end{center}}
-\def\Subtitle#1{\noindent\begin{center}{\LARGE\color{DarkBlue}#1}\end{center}}
+\def\Title#1{\noindent\begin{center}{\Huge\color{Red}#1}\end{center}}
+\def\Subtitle#1{\noindent\begin{center}{\huge\color{DarkBlue}#1}\end{center}}
 
 % select the right font
 %\renewcommand{\familydefault}{\sfdefault}
@@ -122,160 +124,33 @@
 \newcommand{\logNH}{\ensuremath{\log(N_\mathrm{H}/\mathrm{cm}^{-2})}}
 
 \begin{document}
+\large
 
 \pagecolor{white}
 \begin{textblock}{10}(0,1)
-
-\Title{Quasars and \ion{H}{ii} regions during reionization}
-
+\Title{Uncertainty versus Decisions}
+\Subtitle{Some (false) dichotomies between\\ Astrophysics and Machine Learning}
 \end{textblock}
 
-\begin{textblock}{10}(0,4)
+\begin{textblock}{10}(0,5)
 
-\Head{\large Roban Hultman Kramer \hfill with Zolt\'an Haiman}
+\Head{\large Roban Hultman Kramer}
 
-\centering Department of Astronomy, Columbia University
-
+\centering Hightable\\
+{\small http://hightable.com}\\\vspace{0.1in}
+a part of Gerson Lehrman Group\\
+{\small http://gersonlehrmangroup.com}
 \end{textblock}
 
 $\;$
 
 \vfill
-{\small
-\texttt{roban@astro.columbia.edu}\hfill\texttt{zoltan@astro.columbia.edu}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\
-\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{textblock}{10}(0,0)
-  \LHead{\color{Red}The thickness of high-redshift quasar ionization
-    fronts}
-\end{textblock}
-
-\begin{textblock}{10}(0,0.5)
-\Important{\color{DarkBlue}Could the thickness of the ionization front be observed and
-  used to constrain the hardness of the quasar's ionizing spectrum?}
-
-  \begin{center}
-    Simulated propagation of quasar ionization fronts into the IGM
-    \includegraphics[height=6\TPVertModule]{ionization_profile.png}\\ 
-    {\color{Red}Ionized} and {\color{DarkBlue}neutral} fractions at
-    $10^6$ and $10^8$ years for --- hard and - - soft spectra
-  \end{center}
-
-  With a sufficiently hard ionizing spectrum, the thickness of the
-  front exceeds $\sim 1$ physical Mpc and may be measurable from the
-  3D morphology of its redshifted 21-cm signal or Lyman-$\upalpha$
-  absorption spectrum.
-
-  {\small Kramer \& Haiman (2008 MNRAS v385 p1561)}
-\end{textblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\
-\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagecolor{PicBlue}
-\begin{textblock}{10}(0,0)
-  \LHead{\color{white} Probing reionization with quasar spectra}\\
-%{The Impact of the Intrinsic Lyman-$\upalpha$ Emission Line Shape Uncertainty}
-\end{textblock}
-
- \begin{textblock}{2.5}(7,3)
-   \textcolor{white}{The damping wing of neutral hydrogen in the IGM
-     extends into the transmission window of the quasar's ionized
-     region.}
- \end{textblock}
-
-
-\begin{textblock}{5}(0,9.2)
-\textcolor{white}{\small
-Djorgovski et al.\\ (2001 ApJ 560L 5)\\
-\url{http://www.astro.caltech.edu/~george/reion/}}
-\end{textblock}
-
- \begin{textblock}{5}(0,1)
-   \includegraphics[height=9.5\TPVertModule]{discovexplbig_edit.jpg}
- \end{textblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\
-\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagecolor{white}
-\begin{textblock}{10}(0,0)
-  \LHead{\color{Red} Probing reionization with quasar spectra:}\\
-{\color{DarkBlue}  The Impact of the Intrinsic Lyman-$\upalpha$ Emission Line Shape Uncertainty}
-\end{textblock}
-
-\begin{textblock}{5}(0,1)
-    \includegraphics[height=9.5\TPVertModule]{depth_figure.png}
-\end{textblock}
-
-\begin{textblock}{4.5}(5.5,1.5)
- The quasar absorption spectrum carries the signature of the IGM damping
- wing. Mesinger \& Haiman (2007) found best fit values:
 \begin{center}
-  {\large $x_\mathrm{IGM} = 0.2,~1.0,~1.0$}
+\small
+\texttt{roban@astro.columbia.edu}\\
+\texttt{http://roban.github.com/\\
+}
 \end{center}
-at $z = 6.42, 6.28, 6.22$, suggesting that reionization is incomplete
-at $z \sim 6.2$.
-
-Calculating the optical depth from the observed absorption spectrum
-requires modeling the intrinsic spectrum of the quasar.
-
-Our main question:\\ 
-\Important{Could errors in modeling and extrapolating the intrinsic
-  flux bias the $x_\mathrm{IGM}$ value and cause an ionized IGM to
-  mimic a neutral one?}
-\end{textblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\
-\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{textblock}{10}(0,0)
-\LHead{\color{Red} Recovering the IGM neutral fraction:}\\
-input: $R_\mathrm{HII}=40.5\ \mathrm{Mpc}$, $x_\mathrm{Ref} = 10^{-5.5}$, $x_\mathrm{IGM} = 0.1$
-\end{textblock}
-
-\begin{textblock}{10}(0,1.25)
-  \centering
-  Fit results with \textbf{extrapolated spectra}:
-  \includegraphics[width=7\TPHorizModule]{fig12b.png}
-
-\raggedright
-\Important{\Large Systemic errors in the intrinsic flux modeling bias the measurements
-toward underestimating $x_\mathrm{IGM}$.}
-\end{textblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\
-\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{textblock}{10}(0,0)
-\LHead{\color{Red} Recovering the IGM neutral fraction:}\\
-input: $R_\mathrm{HII}=40.5\ \mathrm{Mpc}$, $x_\mathrm{Ref} = 10^{-5.5}$, $x_\mathrm{IGM} = 0.1$
-\end{textblock}
-
-\begin{textblock}{10}(0,1)
-\begin{center}
-\includegraphics[width=5\TPHorizModule]{fig12b.png}
-\end{center}
-
-{\Large
-\Important{ Systemic errors in the intrinsic flux modeling bias
-  the measurements toward underestimating $x_\mathrm{IGM}$.}
-
-This bias only strengths the conclusions in MH2007 that their best-fit
-values (of $x_\mathrm{IGM} = 1.0$ at $z = 6.22$ and $6.28$) indicate a
-significantly neutral IGM at $z>6$.}
-
-\end{textblock}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \
@@ -283,78 +158,169 @@ significantly neutral IGM at $z>6$.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagecolor{white}
-\begin{textblock}{10}(0,0)
-\LHead{\color{Red} Feedback from clustered sources during reionization}
+\begin{textblock}{5}(0,0)
+\centering {\huge Astrophysics}
 \end{textblock}
 
-\begin{textblock}{10}(0,0.5)
-  \Important{\color{DarkBlue}How much will the clustering of early
-    galaxies enhance their influence (feedback) on one another?}
+\begin{textblock}{5}(5,0)
+\centering {\huge Machine Learning}
+\end{textblock}
 
-  Feedback mechanism: star formation is suppressed in minihalos
-  forming inside an ionized region.
+\begin{textblock}{5}(0,1)\Large
+\centering \textcolor{Red}{\VERYHuge Uncertainty} \vspace{0.5in}
 
-  We find that clustering increases minihalo suppression by up to $\sim 60$
-  times. This prolongs reionization and reduces $\tau$, as required by
-  WMAP. Galaxy clustering is likely to similarly boost other feedback
-  mechanisms.
+Constraining Parameters  \vspace{0.5in} \\
+\end{textblock}
+
+\begin{textblock}{1}(4.5,0.75)
+\centering {\Huge vs.\vspace{1in}}
+\end{textblock}
+
+\begin{textblock}{5}(5,1)\Large
+\centering \textcolor{DarkBlue}{\VERYHuge Decisions}  \vspace{0.5in}
+
+Making Predictions  \vspace{0.5in} \\
 
 \end{textblock}
 
-\begin{textblock}{6.5}(0,3.1)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pagecolor{white}
+\begin{textblock}{5}(0,0)
+\centering {\huge Astrophysics}
+\end{textblock}
+
+\begin{textblock}{5}(5,0)
+\centering {\huge Machine Learning}
+\end{textblock}
+
+\begin{textblock}{5}(0,1)\Large
+\centering \textcolor{Red}{\VERYHuge Uncertainty} \vspace{0.1in}
+
+Constraining Parameters  \vspace{0.1in} \\
+\textcolor{Red}{\huge Example: MCMC}  \vspace{0.1in} \\
+exploring parameter space\\
+\includegraphics[width=4\TPHorizModule]{images/MCMC.pdf}
+\end{textblock}
+
+\begin{textblock}{1}(4.5,0.75)
+\centering {\VERYHuge vs.\vspace{1in}}
+\end{textblock}
+
+\begin{textblock}{5}(5,1)\Large
+\centering \textcolor{DarkBlue}{\VERYHuge Decisions}  \vspace{0.1in}
+
+Making Predictions  \vspace{0.1in} \\
+\textcolor{DarkBlue}{\huge Example: SVM}  \vspace{0.1in} \\
+finding boundaries in feature space\\
+\includegraphics[width=4\TPHorizModule]{images/445px-Svm_max_sep_hyperplane_with_margin.png}
+\\{\tiny Credit: Wikimedia Commons\\ \texttt{http://en.wikipedia.org/wiki/File:Svm\_max\_sep\_hyperplane\_with\_margin.png}}
+\end{textblock}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pagecolor{white}
+\begin{textblock}{5}(0,0)
+\centering {\huge Astrophysics}
+\end{textblock}
+
+\begin{textblock}{5}(5,0)
+\centering {\huge Machine Learning}
+\end{textblock}
+
+\begin{textblock}{5}(0,1)\Large
+\centering \textcolor{Red}{\VERYHuge Uncertainty} \vspace{0.1in}
+
+Constraining Parameters  \vspace{0.1in} \\
+\textcolor{Red}{\huge Examples:}  \vspace{0.2in} \\
+error bars\\
+$p$-values\\
+posterior distributions
+\end{textblock}
+
+\begin{textblock}{1}(4.5,0.75)
+\centering {\VERYHuge vs.\vspace{1in}}
+\end{textblock}
+
+\begin{textblock}{5}(5,1)\Large
+\centering \textcolor{DarkBlue}{\VERYHuge Decisions}  \vspace{0.1in}
+
+Making Predictions  \vspace{0.1in} \\
+\textcolor{DarkBlue}{\huge Examples:}  \vspace{0.2in} \\
+$F_\beta$-scores\\
+lift\\
+ROC curves
+
+\end{textblock}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pagecolor{white}
+\begin{textblock}{5}(0,0)
+\centering {\huge Astrophysics}
+\end{textblock}
+
+\begin{textblock}{5}(5,0)
+\centering {\huge Machine Learning}
+\end{textblock}
+
+\begin{textblock}{5}(0,1)\Large
+\centering \textcolor{Red}{\VERYHuge \sout{Uncertainty}}\\
+\centering \textcolor{Red}{\VERYHuge Decisions} \vspace{0.1in}
+\end{textblock}
+
+\begin{textblock}{5}(5,1)\Large
+\centering \textcolor{DarkBlue}{\VERYHuge Decisions}  \vspace{0.1in}
+\end{textblock}
+
+
+\begin{textblock}{1}(4.5,0.75)
+\centering {\VERYHuge vs.\vspace{1in}}\vspace{0.1in}
+\end{textblock}
+
+\begin{textblock}{10}(0.0,2.5)
   \centering
-    \Important{IGM ionized fraction versus redshift}\\
-    \includegraphics[width=6.5\TPHorizModule]{feedback_curves.jpg}\\
+{\Huge Counter Example}\vspace{0.1in}
+
+\huge Planning observations and selecting targets
 \end{textblock}
 
-\begin{textblock}{3}(7,3.1)
-  \vspace{\baselineskip}
 
-  {\small
-  {\color{Purple} - - feedback with no clustering},\\
-  --- feedback with clustering,\\
-  {\color{DarkBlue} $\cdot \cdot$ all halos}, 
-  {\color{Red} $\cdot \cdot$ large halos only}}
+\begin{textblock}{5}(0,5)\Large\centering
+\textbf{Examples:}\\
+telescope time\\
+budgets for instruments
 
-  \vspace{2\baselineskip}
+(HST oversubscribed by $\approx 600\%$)
 
-  Feedback also increases the mean ionized bubble size at late stages
-  of reionization.
+\end{textblock}
 
-  \vspace{2\baselineskip}
-
-  {\small Kramer, Haiman, \& Oh\\ (2006 ApJ v649 p570)}
-
+\begin{textblock}{5}(5,5)\Large\centering
+\textbf{Examples:}\\
+recommendation lists\\
+marketing budgets\\
 \end{textblock}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \
 \clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{textblock}{10}(0,10)\centering
-\textbf{\color{white} Honeycomb Cowfish \textit{Acanthostracion polygonius},
-  Bonaire, Netherlands Antilles}
-\end{textblock}
 
-\begin{textblock}{12}(-1,-1)
-    \includegraphics[width=12\TPHorizModule]{cowfish_1024.jpg}
-\end{textblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\
-\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{textblock}{10}(0,0)
-\LHead{\color{Red} Recovering the IGM neutral fraction:}\\
-input: $R_\mathrm{HII}=40.5\ \mathrm{Mpc}$, $x_\mathrm{Ref} = 10^{-5.5}$, $x_\mathrm{IGM} = 0.1$
-\end{textblock}
-
-\begin{textblock}{10}(0,1)\centering
-  \ImportantB{Histogram of fit results with {\color{DarkBlue}
-      perfectly known spectra} (no flux extrapolation errors):}\\
-  \includegraphics[width=8\TPHorizModule]{fig12a.png}
-\end{textblock}
 
 \end{document}
