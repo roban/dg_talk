@@ -1,3 +1,150 @@
+I'm Roban Kramer, and I'm a data scientist at Hightable, which is a
+community for entrepreneurs that’s designed to make it easier to find
+and share expertise. Before I joined Hightable, I was an
+Astrophysicist, so today I thought I'd share my observations about
+differences in the way I've approached data as an astrophysicist, and
+as a data scientist.
+
+----
+
+Here's one huge difference: as an astrophysicist, I think about
+data in terms of how much it helps us reduce our vast ignorance about
+the Universe by constraining parameters in our models of it, so
+uncertainty is everything.
+
+As a data scientist using machine learning techniques, my focus is on
+using data to making predictions and decisions based on those
+predictions.
+
+----
+
+Here's an example from my astronomy research on quasars, which are
+extremely bright objects powered by super-massive black holes. This is
+a spectrum of a quasar, showing how much bright it is at different
+wavelengths, plotted for other astrophysicists, and you can see that
+I've devoted as much ink to showing the error or uncertainty on the
+measurements, as I have to the values of the measurements.
+
+The reason we care about the uncertainty is because that's
+what determines how well we can constrain the range of plausible
+values for the variables at play.
+
+----
+
+So in this plot of two parameters from a fit to that quasar data, I
+emphasize the boundary on the plausible region of parameter space, as
+shown by the gray ellipse. The blue points are samples from a
+Monte-Carlo Markov Chain.
+
+----
+
+I also wanted to learn about the whole population of quasars from the
+sample we've observed, so I built a hierarchical model that uses the
+data on individual objects to constrain parameters describing the
+whole population. The parameters of the population in turn help
+constrain the fits to the individual spectra.
+
+----
+
+You'll remember that the gray ellipse from the graph up in the corner
+represents the boundary of plausible values for a single quasar. In
+this new plot, each of the small gray ellipses comes from one of those
+fits to a individual quasar. We use the uncertainty on all those
+individual fits when we infer the parameters of the whole population,
+bounding our uncertainty about all quasars.
+
+----
+
+So I've given you an example of the emphasis on uncertainty in
+astrophysics, which was my use of Monte-Carlo Markov Chains to explore
+the parameter space of hierarchical models.
+
+Now let me give you an example from my machine learning work of the
+emphasis on decision-making, using support-vector machines to find
+decision boundaries in feature space.
+
+----
+
+At hightable we faced data problems like tagging incoming content, and
+classifying new users. As you can see from this histogram, when we let
+humans add free-form tags, we got a situation where the majority of
+the tags were only used once or twice, which makes it hard to use them
+to group similar documents.
+
+----
+
+One potential solution was to move to fully-automated tagging, but we
+really wanted to increase the accuracy of tags by having them
+validated by humans.
+
+Another option was to make users pick from a list of pre-defined
+categories, but that feel limiting when you don't have enough choices
+and arduous when you do.
+
+----
+
+The solution we implemented was to train automatic classifiers, like
+support vector machines, or logistic regression classifiers, on the
+best tags from our existing data, and use those to suggest a limited
+number of tags to users. That forces us to make a decision, do we show
+a tag to a user or not. We can't simply assign a probability to a tag
+and consider ourselves done.
+
+----
+
+I want to careful not to oversimplify the situation. Decision-making
+is also a critical component of knowledge generation in
+astrophysics. There are only so many world-class telescopes, and there
+is enormous pressure on their time. For instance, Hubble is
+oversubscribed by about 600%. So the community of astronomers has to
+decide what kinds of observations to make of what objects.
+
+----
+
+But having said that, I still think this difference between
+astronomy's focus on uncertainty, and machine learning's focus on
+prediction is pervasive. Another way we can see it, is in the tools we
+use most commonly to evaluate our efforts. In machine learning we
+focus on the quality of our predictions, always trying to improve
+measures like F-scores, lift, and area under the ROC curve.
+
+----
+
+When we evaluate work in astrophysics, we use tools like error bars
+and posterior distributions that emphasize the magnitude of our
+uncertainty, rather than the accuracy of our predictions. This
+reflects natural scientists' interest in the parameters of our models
+of physical processes, rather than on their outputs, which serve to
+validate those models, but aren't really the point.
+
+----
+
+A related difference is that in astronomy, it's often hard to get
+data, so we end up with relatively little of it, but we study highly
+complex processes, so we use most of our computational resources just
+calculating our models.
+
+In machine learning, we often have massive amounts of data, which we
+can analyze with relatively simple algorithms. So most of our
+bottlenecks occur because of the volume of our data.
+
+----
+
+And of course, that's too simple, too, especially because astronomers
+tools are improving. For instance there are plans to build a radio
+telescope that will generate over 1 terabyte of data per second.
+
+I've painted a picture of big difference between natural science and
+data science, but ultimately I do think that the techniques we've
+developed in each will be valuable in both.
+
+Thank you so much. 
+
+
+
+
+xxxxxxxxxxxxxxx
+
 Roban Hultman Kramer
 
 Hightable
