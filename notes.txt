@@ -1,7 +1,9 @@
 I'm Roban Kramer, and I'm a data scientist at Hightable, which is a
-community for entrepreneurs that’s designed to make it easier to find
-and share expertise. Before I joined Hightable, I was an
-Astrophysicist, so today I thought I'd share my observations about
+private community for startup leaders that’s designed to facilitate
+finding and sharing knowledge and expertise with peers.
+
+Before I joined Hightable at a data scientist, I was an Astrophysicist
+at ETH Zurich, so today I thought I'd share my observations about some
 differences in the way I've approached data as an astrophysicist, and
 as a data scientist.
 
@@ -19,37 +21,42 @@ predictions.
 ----
 
 Here's an example from my astronomy research on quasars, which are
-extremely bright objects powered by super-massive black holes. This is
-a spectrum of a quasar, showing how much bright it is at different
-wavelengths, plotted for other astrophysicists, and you can see that
-I've devoted as much ink to showing the error or uncertainty on the
-measurements, as I have to the values of the measurements.
+extremely *bright* objects powered by *super-massive black
+holes*. This is a spectrum of a quasar, showing how much bright it is
+at different wavelengths, plotted for other astrophysicists, and you
+can see that I've devoted as much ink to showing the error (or
+uncertainty) in the bottom panel, as I have to the values of the
+measurements in the top panel.
+
+----
 
 The reason we care about the uncertainty is because that's
 what determines how well we can constrain the range of plausible
 values for the variables at play.
 
-----
-
 So in this plot of two parameters from a fit to that quasar data, I
 emphasize the boundary on the plausible region of parameter space, as
-shown by the gray ellipse. The blue points are samples from a
-Monte-Carlo Markov Chain.
+shown by the gray ellipse. 
+
+The blue points are samples from a Monte-Carlo Markov Chain.
 
 ----
 
 I also wanted to learn about the whole population of quasars from the
 sample we've observed, so I built a hierarchical model that uses the
 data on individual objects to constrain parameters describing the
-whole population. The parameters of the population in turn help
-constrain the fits to the individual spectra.
+whole population.
+
+The parameters of the population in turn help constrain the fits to
+the individual spectra.
+
+You'll remember that the gray ellipse from the graph up in the corner
+represents the boundary of plausible values for a single quasar. 
 
 ----
 
-You'll remember that the gray ellipse from the graph up in the corner
-represents the boundary of plausible values for a single quasar. In
-this new plot, each of the small gray ellipses comes from one of those
-fits to a individual quasar. We use the uncertainty on all those
+In this new plot, each of the small gray ellipses comes from one of
+those fits to a individual quasar. We use the uncertainty on all those
 individual fits when we infer the parameters of the whole population,
 bounding our uncertainty about all quasars.
 
@@ -65,11 +72,15 @@ decision boundaries in feature space.
 
 ----
 
-At hightable we faced data problems like tagging incoming content, and
-classifying new users. As you can see from this histogram, when we let
-humans add free-form tags, we got a situation where the majority of
-the tags were only used once or twice, which makes it hard to use them
-to group similar documents.
+At hightable we faced data problems like *tagging incoming content*,
+and *classifying new users*.
+
+As you can see from this histogram, when we let humans add free-form
+tags, we got a situation where the majority of the tags were only used
+once or twice, which makes it hard to use them to group similar
+documents.
+
+Free-form tags just weren't consistent enough to be useful.
 
 ----
 
@@ -103,131 +114,46 @@ decide what kinds of observations to make of what objects.
 
 But having said that, I still think this difference between
 astronomy's focus on uncertainty, and machine learning's focus on
-prediction is pervasive. Another way we can see it, is in the tools we
-use most commonly to evaluate our efforts. In machine learning we
-focus on the quality of our predictions, always trying to improve
-measures like F-scores, lift, and area under the ROC curve.
+prediction is pervasive. 
+
+Another way we can see it is in the tools we use most commonly to
+evaluate our efforts.
+
+In machine learning we focus on the quality of our predictions, always
+trying to improve measures like F-scores, lift, and area under the ROC
+curve.
 
 ----
 
 When we evaluate work in astrophysics, we use tools like error bars
-and posterior distributions that emphasize the magnitude of our
-uncertainty, rather than the accuracy of our predictions. This
-reflects natural scientists' interest in the parameters of our models
-of physical processes, rather than on their outputs, which serve to
-validate those models, but aren't really the point.
+and posterior distributions that emphasize the *magnitude of our
+uncertainty*, rather than the accuracy of our predictions. 
+
+This reflects natural scientists' interest in the *parameters* of our
+models of *physical processes*, rather than on their outputs, which do
+serve to validate those models, but aren't the real point.
 
 ----
 
-A related difference is that in astronomy, it's often hard to get
-data, so we end up with relatively little of it, but we study highly
-complex processes, so we use most of our computational resources just
-calculating our models.
+A related difference is that in astronomy, it's traditionally been
+hard to get our data, so we end up with relatively little of it, but
+we study highly complex processes, so we use most of our computational
+resources just calculating our models.
 
 In machine learning, we often have massive amounts of data, which we
-can analyze with relatively simple algorithms. So most of our
-bottlenecks occur because of the volume of our data.
+analyze with relatively simple models. So most of our bottlenecks
+occur because of the volume of our data.
 
 ----
 
-And of course, that's too simple, too, especially because astronomers
-tools are improving. For instance there are plans to build a radio
-telescope that will generate over 1 terabyte of data per second.
+Of course, that's also an over-generalization, especially because
+astronomers tools are improving. For instance there are plans to build
+a radio telescope that will generate over *1 terabyte* of data every
+second.
 
-I've painted a picture of big difference between natural science and
-data science, but ultimately I do think that the techniques we've
-developed in each will be valuable in both.
+Let me say finally that, though I've painted a picture of big
+differences between natural science and machine learning, ultimately
+it's clear that the techniques we've developed in each are valuable in
+both fields.
 
 Thank you so much. 
-
-
-
-
-xxxxxxxxxxxxxxx
-
-Roban Hultman Kramer
-
-Hightable
-
-All of these dichotomies are false.
-
-Observational Astrophysics versus Applied Machine Learning
-
- "uncertainty is everything" vs. "decisions are everything"
-
-examples
-
-  Bayesian MCMC versus SVM: focus effort on exploring parameter space
-  (space occupied by the weight vector) versus finding a decision
-  boundary in feature space (the space of the data)
-
-or
-
- a focus on constraining parameters and model checking versus
- predictions and accuracy
-
-counter-example: observation planning and target selection
-
- http://arxiv.org/abs/1101.4965
-
- instead of showing a limited number of recommendations to a user, or
- spending a limited marketing budget on targeted ads
-
- spend a limited amount of telescope time observing potentially
- interesting objects (HST oversubscribed by a factor of 6 according
- to the note I got rejecting my last proposal)
-
-or 
-
- Error bars, p-values, and posterior distributions versus F_n scores,
- lift, and ROC curves
-
- Of course, in astronomy we like to plot 1-sigma error bars in log
- space and are comfortable with them spanning orders of magnitude. A
- factor of two is easily swept under the rug with the phrase
- "excluding systematic error".
-
- figure 4: http://arxiv.org/abs/0912.4263
-
-Machine Learning versus Statistics
-
- The big difference I’ve noticed between the two fields is that
- statisticians like to demonstrate our methods on new examples whereas
- computer scientists seem to be prefer to show better performance on
- benchmark problems. Both approaches to evaluation make sense in their
- own way; I just have the impression that stat and CS have evolved to
- have different priorities. To a statistician, a method is powerful
- when it generalizes to new situations. To a computer scientist,
- though, solving a new problem is no big deal—they can solve problems
- whenever they want, and it is through benchmarks that they can make
- fair comparisons.
-
- Economics: identify the causal effect;
-
- Psychology: model the underlying process;
-
- Statistics: fit the data;
-
- Computer science: predict.
-
- -- http://andrewgelman.com/2012/09/model-checking-and-model-understanding-in-machine-learning/
-
-Models with high computational complexity versus models with high data
-size (dimensions and samples).
-
- figure 6 from http://ba.stat.cmu.edu/journal/2012/vol07/issue03/solonen.pdf
-
-vs.
-
- mahout
-
-Counter-example: SKA
-
-Quasar Jet Image (http://hubblesite.org/newscenter/archive/releases/2000/20/image/a/) / Quasar spectrum
-
- jet extends 1,500 parsecs / 5,000 light-years 
- Credit: NASA and The Hubble Heritage Team (STScI/AURA)
-
-Quasar fit parameters
-
-Hierarchical model / IGM fit parameters
